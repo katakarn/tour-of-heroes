@@ -1,4 +1,17 @@
 <h2 class="red">{{hero.name | uppercase}} Details</h2>
+
+<ul>
+    <li *ngFor="let hero of heroes">
+        <button 
+        type="button" 
+        class="hero"
+        (click)="onSelect(hero)">
+            <span class="badge">{{hero.id}}</span>
+            <span class="name">{{hero.name}}</span>
+        </button>
+    </li>
+</ul>
+
 <div>
     <span>id: </span>
     {{hero.id}}
