@@ -9,9 +9,9 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent implements OnInit {
 
-  hero: Hero = {
+  selectedHero: Hero = {
     id: 1,
-    name: 'ไม่หล่อให้สาวเหลียว แต่กินเตี๋ยวให้สาวเลี้ยง'
+    name: 'ฤดูกาลกำลังจะพัดผ่าน'
   };
 
   heroes = HEROES;
@@ -21,8 +21,8 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelect(hero: Hero){
-    this.hero = hero;
+  onSelect(hero: Hero) {
+    this.selectedHero = hero;
   }
 
 }
